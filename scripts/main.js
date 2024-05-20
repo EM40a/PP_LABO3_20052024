@@ -34,7 +34,7 @@ async function handlerSubmit(e) {
         Date.now(),
         ...Object.values(form)
           .filter((e) => e.type !== "hidden") //? Omite el input del id
-          .map((e) => e.value)
+          .map((e) => (e.type === "checkbox" ? e.checked : e.value))
       );
 
       alta(MODEL);

@@ -20,11 +20,26 @@ export default class Planeta extends PlanetaBase {
     this.composicion = composicion;
   }
 
-  checkDistancia() {
-    if (isNaN(this.distancia) || this.distancia < 0) {
+  verificar() {
+    const respuesta = super.verificar();
+
+    if (!respuesta.success) {
+      return respuesta;
+    }
+
+    const checkDistancia = super.checkNum(this.distancia);
+
+    if (!checkDistancia.success) {
       return {
         success: false,
-        response: "La distancia debe ser un número mayor a 0",
+        response: "Distancia inválida",
+      };
+    }
+
+    if (!super.checkCadena(this.composicion)) {
+      return {
+        success: false,
+        response: "Composición inválida",
       };
     }
 
