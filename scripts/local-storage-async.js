@@ -1,5 +1,5 @@
 //? expresado en milisegundos
-const TIEMPO = 0.5 * 1000;
+const TIEMPO = 2.5 * 1000;
 
 //? Funciones para leer y escribir en el local storage
 export function leerLs(clave) {
