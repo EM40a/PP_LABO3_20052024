@@ -29,14 +29,14 @@ export default class Planeta extends PlanetaBase {
 
     const checkDistancia = super.checkNum(this.distancia);
 
-    if (!checkDistancia.success) {
+    if (checkDistancia) {
       return {
         success: false,
         response: "Distancia inválida",
       };
     }
 
-    if (!super.checkCadena(this.composicion)) {
+    if (super.checkCadena(this.composicion)) {
       return {
         success: false,
         response: "Composición inválida",

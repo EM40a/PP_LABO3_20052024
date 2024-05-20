@@ -10,21 +10,21 @@ export default class PlanetaBase {
   verificar() {
     const tipoValid = ["rocoso", "gaseoso", "enano", "helado"];
 
-    if (!this.checkCadena(this.nombre)) {
+    if (this.checkCadena(this.nombre)) {
       return {
         success: false,
         response: `El nombre es muy corto`,
       };
     }
 
-    if (!this.checkNum(this.masa)) {
+    if (this.checkNum(this.masa)) {
       return {
         success: false,
         response: "Masa inválida",
       };
     }
 
-    if (!this.checkNum(this.tamano)) {
+    if (this.checkNum(this.tamano)) {
       return {
         success: false,
         response: "Tamaño inválido",
@@ -45,7 +45,7 @@ export default class PlanetaBase {
   }
 
   checkCadena(cadena) {
-    return cadena.length < 3;
+    return cadena.length <= 3;
   }
 
   checkNum(num) {
