@@ -36,6 +36,20 @@ export default class Planeta extends PlanetaBase {
       };
     }
 
+    if (this.checkBoolean(this.anillo)) {
+      return {
+        success: false,
+        response: "Valor de anillo inválido",
+      };
+    }
+
+    if (this.checkBoolean(this.vida)) {
+      return {
+        success: false,
+        response: "Valor de vida inválido",
+      };
+    }
+
     if (super.checkCadena(this.composicion)) {
       return {
         success: false,
@@ -44,5 +58,9 @@ export default class Planeta extends PlanetaBase {
     }
 
     return { success: true, response: null };
+  }
+
+  checkBoolean(value) {
+    return typeof value !== "boolean";
   }
 }
