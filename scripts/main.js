@@ -15,6 +15,7 @@ const $BTN_MODIFICAR = document.getElementById("btn-modificar");
 document.addEventListener("DOMContentLoaded", onInit);
 
 function onInit(e) {
+  document.getElementById("year").textContent = new Date().getFullYear();
   handlerCargarObjetos(OBJETOS);
   handlerCargarTabla();
 

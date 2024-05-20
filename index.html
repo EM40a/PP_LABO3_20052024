@@ -71,10 +71,12 @@
           </div>
 
           <div class="form-group">
+            <label for="massa">Massa</label>
             <input type="number" name="massa" placeholder="Massa...">
           </div>
 
           <div class="form-group">
+            <label for="tamano">Tamaño</label>
             <input type="number" name="tamano" placeholder="Tamano...">
           </div>
 
@@ -88,23 +90,21 @@
             </select>
           </div>
           <!-- ======= -->
-          <div class="form-group">
+          <div class="form-group inline">
             <input type="number" name="distancia" placeholder="Distancia...">
           </div>
 
-          <div class="form-group flex">
+          <div class="form-group flex inline">
             <label for="vida">Presenta vida</label>
             <input type="checkbox" name="vida">
             <label for="anillo">Tiene anillos</label>
             <input type="checkbox" name="anillo">
           </div>
 
-          <div class="form-group">
+          <div class="form-group inline">
             <label for="composicion">Composición Atmosférica</label>
             <input autocomplete="off" type="text" name="composicion">
           </div>
-
-          <div></div>
 
           <button class="btn btn-primary" type="submit">Guardar</button>
           <button class="btn btn-secondary" type="button" id="btn-cancelar">Cancelar</button>
@@ -121,7 +121,7 @@
         <li><a href="#">Contacto</a></li>
       </ul>
 
-      <p>&copy; <time>2024</time> ABM+</p>
+      <p>&copy; <time id="year"></time> ABM+</p>
     </footer>
   </div>
 </body>

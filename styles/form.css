@@ -8,17 +8,7 @@ form {
   background-color: #fff;
 }
 
-input[type="file"] {
-  padding-block: 1.5rem;
-}
-
-input[type="radio"] {
-  margin-top: 18px;
-  width: fit-content;
-}
-
 input,
-textarea,
 select {
   margin-top: 4px;
   width: 100%;
@@ -28,12 +18,11 @@ select {
   border: 1px solid #ccc;
 }
 
-textarea {
-  min-height: 70px;
-  resize: vertical;
-}
-
 .form-group.inline {
   grid-column: 1 / -1;
   gap: 1rem;
+}
+
+.form-group.inline label {
+  width: 100%;
 }
